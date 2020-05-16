@@ -8,9 +8,13 @@
 <title>Сайт дз</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/css.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+	<div id="progressbar"></div>
+	<div id="scrollPath"></div>
+
 	<header class="header">
 		<div class="cont">
 		<div class="cont1">
@@ -142,6 +146,16 @@
 </p>
 	</div>
 </footer>
+<script type="text/javascript">
+	let progress = document.getElementById('progressbar');
+	let totalHeight = document.body.scrollHeight - window.innerHeight;
+	window.onscroll = function(){
+		let progressHeight = (window.pageYOffset / totalHeight) * 100;
+		progress.style.height = progressHeight + "%";
+
+	}
+</script>
+
 </body>
 </html>
 
